@@ -7,7 +7,7 @@ int main(void)
 
 {
 
-		char ermias[8] = "_putchar";
+		char ermias[] = "_putchar";
 
 		int c;
 
