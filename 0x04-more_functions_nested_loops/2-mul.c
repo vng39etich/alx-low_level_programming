@@ -1,8 +1,8 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * mul - function that prints the numbers, from 0 to 9, followed by a new line.
- * @a: the int for the paramaters of my function
- * @b: the int for the paramaters of my function
+ * mul - function that prints the numbers, followed by a new line.
+ * @a: the int for the paramaters of the function
+ * @b: the int for the paramaters of the function
  * Return: 0
  */
 int mul(int a, int b)
