@@ -10,13 +10,11 @@ void print_number(int n)
 		int div, last_digit, tmp, lenght;
 
 		last_digit = n % 10;
-				
 		if (last_digit < 0)
 		{
 			_putchar('-');
 			last_digit = last_digit * (-1)
 		}
-					
 			n = (n / 10);
 
 		if (n < 0)
@@ -32,7 +30,7 @@ void print_number(int n)
 			div *= 10;
 			tmp = tmp / 10;
 		}
-										
+
 		div = div / 10;
 		while (div >= 1)
 		{
