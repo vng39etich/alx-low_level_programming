@@ -1,19 +1,15 @@
 #include "main.h"
 /**
- * print_most_numbers - check the code for Holberton School students.
+ * print_most_numbers - print numbers without 2 and 4.
  * Return: Always 0.
  */
 void print_most_numbers(void)
 {
-		char c = '0';
+	int a;
 
-		while (c <= '9')
-		{
-			if (c != '2' && c != '4')
-			{
-				_putchar(c);
-			}
-		c++;
-		}
+	for (a = '0'; a <= '9'; a++)
+
+		if (a != '2' && a != '4')
+			_putchar(a);
 	_putchar('\n');
 }
