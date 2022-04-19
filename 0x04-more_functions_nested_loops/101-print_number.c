@@ -22,7 +22,7 @@ void print_number(int n)
 	n = (n / 10);
 	if (n < 0)
 	{
-		n = n * (1);
+		n = n * (-1);
 	}
 	/* calculate the length of a number and div to divide it with */
 	lenght  = 0;
