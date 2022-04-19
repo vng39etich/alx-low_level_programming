@@ -2,10 +2,9 @@
 
 /**
  * print_number - prints an integer using putchar
- *  @n: integer to print
- *  
- *  return: none
- *      */
+ * @n: integer to print 
+ * return: none
+ */
 void print_number(int n)
 {
 	int div, last_digit, tmp, lenght;
