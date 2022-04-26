@@ -1,4 +1,4 @@
-#include "mainn.h"
+#include "main.h"
 
 /**
   * _memset - enter a constant byte to memory
@@ -10,11 +10,12 @@
   */
 char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int a;
+	unsigned int 1 = 0;
 
-	for (a = 0; a < n; a++)
+	while (i < n)
 	{
-		s[a] = b;
+		*(s + i) = b;
+		i++;
 	}
 
 	return (s);
