@@ -1,19 +1,18 @@
-#include <main.h>
+#include "main.h"
 /**
- * _memcpy - this fills memory with another buffer
- * @dest: this is the source string
- * @src: string used for filling
- * @n: the lenght of the buffer
- * Return: new tring
- *
+ * _memcpy - fills memory with another buffer.
+ * @dest: source string
+ * @src: string for filling
+ * @n: lenght of buffer
+ * Return: new string.
  */
-char *_memcpy(char *dest, char *src, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i = 0;
 
 	while (i < n)
 	{
-		*(dest + i) = *(src +i);
+		*(dest + i) = *(src + i);
 		i++;
 	}
 	return (dest);
