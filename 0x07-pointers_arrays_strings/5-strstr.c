@@ -24,7 +24,6 @@ char *_strstr(char *haystack, char *needle)
  * coincidence - define if the string b is inside a.
  * @a: source string
  * @b: string to be searched
- *
  * Return: 1 if there is coincidence, otherwise 0.
  */
 int coincidence(char *a, char *b)
