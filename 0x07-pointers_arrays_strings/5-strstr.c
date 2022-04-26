@@ -21,6 +21,7 @@ char *_strstr(char *haystack, char *needle)
 	}
 	return (0);
 }
+
 /**
  * coincidence - define if the string b is inside a.
  * @a: source string
