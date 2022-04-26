@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strstr - prints the consecutive characters of str1 that are in str2.
  * @haystack: source string
