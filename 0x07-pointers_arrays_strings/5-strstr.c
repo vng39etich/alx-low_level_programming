@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * _strstr - prints the consecutive characters of s1 that are in s2.
+ * _strstr - prints the consecutive caracters of s1 that are in s2.
  * @haystack: source string
  * @needle: searching string
- *
  * Return: new string.
  */
 char *_strstr(char *haystack, char *needle)
@@ -21,12 +20,10 @@ char *_strstr(char *haystack, char *needle)
 	}
 	return (0);
 }
-
 /**
  * coincidence - define if the string b is inside a.
  * @a: source string
  * @b: string to be searched
- *
  * Return: 1 if there is coincidence, otherwise 0.
  */
 int coincidence(char *a, char *b)
@@ -36,6 +33,7 @@ int coincidence(char *a, char *b)
 		b++;
 		a++;
 	}
+
 
 	if (*b == '\0')
 		return (1);
