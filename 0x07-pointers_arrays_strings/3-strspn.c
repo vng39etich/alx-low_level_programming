@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _strspn - prints characters of string1 found in string2.
  * @s: string source
