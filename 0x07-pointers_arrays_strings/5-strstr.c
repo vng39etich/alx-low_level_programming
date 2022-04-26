@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strstr - prints the consecutive caracters of s1 that are in s2.
+ * _strstr - prints the consecutive characters of str1 that are in str2.
  * @haystack: source string
  * @needle: searching string
  *
