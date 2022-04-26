@@ -22,21 +22,21 @@ char *_strstr(char *haystack, char *needle)
 	}
 }
 /**
- * coincidence - define if the string y is inside x.
+ * coincidence - define if the string b is inside a.
  * @x: source string
  * @y: string to be searched
  *
  * Return: 1 if there is coincidence, otherwise 0.
  */
-int coincidence(char *x, char *y)
+int coincidence(char *a, char *b)
 {
-	while (*y && *y == *x)
+	while (*b && *b == *a)
 	{
-		y++;
-		x++;
+		b++;
+		a++;
 	}
 
-	if (*y == '\0')
+	if (*b == '\0')
 		return (1);
 	else
 		return (0);
