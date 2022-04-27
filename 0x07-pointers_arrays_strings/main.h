@@ -22,4 +22,3 @@ void set_string(char **s, char *to);
 
 int coincidence(char *a, char *b);
 #endif
-~      
