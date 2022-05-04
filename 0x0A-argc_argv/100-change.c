@@ -3,7 +3,8 @@
 #include <ctype.h>
 
 /**
- * main - prints the least  number of coins to make change for an amount of money.
+ * main - prints the least  number of coins to make change for an amount
+ * money
  * @argc: argument count
  * @argv: argument vector
  *
@@ -13,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	int m, n, cent = 0;
+	int m, p, cent = 0;
 	int change[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -29,15 +30,15 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (n = 0; n < 5; n++)
+		for (p = 0; p < 5; n++)
 		{
-			if (m >= change[n])
+			if (m >= change[p])
 			{
-				m -= change[n];
+				m -= change[p];
 				cent += 1;
-				if (m >= change[n])
+				if (m >= change[p])
 				{
-					n--;
+					p--;
 				}
 				else if (m == 0)
 				{
