@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (p = 0; p < 5; n++)
+		for (p = 0; p < 5; p++)
 		{
 			if (m >= change[p])
 			{
