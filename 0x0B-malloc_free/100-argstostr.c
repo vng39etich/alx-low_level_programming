@@ -38,10 +38,9 @@ char *argstostr(int ac, char **av)
 			p[x] = av[a][b];
 			x++;
 		}
-		p[k] = '\n';
-		k++;
+		p[x] = '\n';
+		x++;
 	}
-	p[k] = '\0';
+	p[x] = '\0';
 	return (p);
 }
-
