@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 
 /**
 * **strtow - function that splits a string into words.
