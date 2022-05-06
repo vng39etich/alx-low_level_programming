@@ -10,16 +10,16 @@
 char **strtow(char *str)
 {
 	char **d;
-	int m;
-	int n = 0;
+	int i;
+	int j = 0;
 	int con = 0;
 
 	if (str == NULL)
 		return (NULL);
 
-	for (m = 0 ; str[m] != '\0' ; m++)
+	for (i = 0 ; str[i] != '\0' ; i++)
 	{
-		if (str[m] != 32)
+		if (str[i] != 32)
 			con++;
 	}
 
@@ -28,12 +28,12 @@ char **strtow(char *str)
 	if (d == NULL)
 		return (NULL);
 
-	for (m = 0 ; str[m] != '\0' ; m++)
+	for (i = 0 ; str[i] != '\0' ; i++)
 	{
-		if (str[m] != 32)
+		if (str[i] != 32)
 		{
-			*d[n] = str[m];
-			n++;
+			*d[j] = str[i];
+			j++;
 		}
 		else
 		{
