@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  * malloc_checked - creates an array of integers.
- * @b: input.
+ * @b: input..
  * Return: Output.
  */
 void *malloc_checked(unsigned int b)
