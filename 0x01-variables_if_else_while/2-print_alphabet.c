@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  *  * main - entry point
- *   * Return: ngure
+ *   * Return: Ng'etich
  */
 int main(void)
 
