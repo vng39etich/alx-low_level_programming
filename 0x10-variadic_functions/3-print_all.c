@@ -17,25 +17,25 @@ void print_all(const char * const format, ...)
 		{ "f", print_a_float },
 		{ "s", print_a_char_ptr }
 	};
-	unsigned int a = 0;
-	unsigned int b = 0;
+	unsigned int i = 0;
+	unsigned int j = 0;
 	char *separator = "";
 
 	va_start(args, format);
 
 	while (format != NULL && format[i])
 	{
-		b = 0;
+		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == *form_types[b].identifier)
+			if (format[i] == *form_types[j].identifier)
 			{
-				form_types[b].f(separator, args);
+				form_types[j].f(separator, args);
 				separator = ", ";
 			}
-			b++;
+			j++;
 		}
-		a++;
+		i++;
 	}
 
 	va_end(args);
