@@ -1,50 +1,88 @@
 #include "variadic_functions.h"
 #include<stdio.h>
 #include<stdarg.h>
-
 /**
- * print_all - function that prints anything
- *
- * @format: is a list of types of arguments passed to the function
+ * p_char - print char
+ * @list:arg
+ * Return: void
+ */
+
+void p_char(va_list list)
+{
+	printf("%c", va_arg(list, int));
+}
+/**
+ * p_string - print string
+ * @list:arg
+ * Return: void
+ */
+
+void p_string(va_list list)
+{
+	char *str;
+
+	str = va_arg(list, char*);
+	if (str == NULL)
+		str = "(nil)";
+printf("%s", str);
+}
+/**
+ * p_integer - print integer
+ * @list:arg
+ * Return: void
+ */
+
+void p_integer(va_list list)
+{
+	printf("%i", va_arg(list, int));
+}
+/**
+ * p_float - print float
+ * @list:arg
+ * Return: void
+ */
+
+void p_float(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+/**
+ * print_all - print everything
+ * @format:arg
+ * Return: void
  */
 void print_all(const char * const format, ...)
+
 {
-	va_list list;
-	int a = 0;
-	char *k;
-	char *sep = ", ";
+	unsigned int i, j;
+	t_print t[] = {
+		{"c", p_char},
+		{"s", p_string},
+		{"i", p_integer},
+		{"f", p_float},
+		{NULL, NULL}
+	};
+	va_list valist;
+	char *s = "";
 
-	va_start(list, format);
-
-	while ((format != NULL) && *(format + a) != '\0')
+	va_start(valist, format);
+	i = 0;
+	while (format && format[i])
 	{
-		switch (*(format + a))
+		j = 0;
+		while (t[j].x != NULL)
 		{
-			case 's':  /* string */
-				k = va_arg(list, char *);
-				k = (k != NULL) ? k : "(nil)";
-				printf("%s", k);
+			if (*(t[j].x) == format[i])
+			{
+				printf("%s", s);
+				t[j].T_func(valist);
+				s = ", ";
 				break;
-			case 'i':  /* int */
-				printf("%i", va_arg(list, int));
-				break;
-			case 'c':  /* char */
-				/* need a cast here since va_arg only takes fully promoted types */
-				printf("%c", va_arg(list, int));
-				break;
-			case 'f':  /* float */
-				printf("%f", va_arg(list, double));
-				break;
-			default:   /* if it does not comply with any of the cases */
-				x++;
-				continue;
+			}
+			j++;
 		}
-		if (*(format + a + 1) != 0)
-		{
-			printf("%s", sep);
-		}
-		a++;
+		i++;
 	}
-	putchar(10);
-	va_end(list);
+	va_end(valist);
+	printf("\n");
 }
