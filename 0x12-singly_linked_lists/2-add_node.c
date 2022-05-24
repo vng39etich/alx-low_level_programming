@@ -34,12 +34,12 @@ list_t *add_node(list_t **head, const char *str)
 /**
  * _strlen_recursion - returns the length of a string.
  * @s: string.
- * Return: length of @n.
+ * Return: length of @s.
  */
-int _strlen_recursion(char *n)
+int _strlen_recursion(char *s)
 {
-	if (*n == 0)
+	if (*s == 0)
 		return (0);
 	else
-		return (1 + _strlen_recursion(n + 1));
+		return (1 + _strlen_recursion(s + 1));
 }
