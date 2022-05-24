@@ -43,4 +43,3 @@ int _strlen_recursion(char *n)
 	else
 		return (1 + _strlen_recursion(n + 1));
 }
-
