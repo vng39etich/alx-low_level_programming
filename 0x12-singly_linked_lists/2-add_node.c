@@ -34,7 +34,7 @@ list_t *add_node(list_t **head, const char *str)
 /**
  * _strlen_recursion - returns the length of a string.
  * @s: string.
- * Return: length of @s.
+ * Return: length of @n.
  */
 int _strlen_recursion(char *n)
 {
